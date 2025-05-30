@@ -62,7 +62,43 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Option 1: Deploy with Lovable (Recommended)
+
 Simply open [Lovable](https://lovable.dev/projects/e6627dba-10a9-49d6-8314-b2be81faa951) and click on Share -> Publish.
+
+### Option 2: Deploy to GitHub Pages
+
+This project is configured for GitHub Pages deployment with automatic CI/CD.
+
+#### Automatic Deployment (Recommended)
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Navigate to Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Push your code to the main branch:**
+   ```sh
+   git add .
+   git commit -m "Setup GitHub Pages deployment"
+   git push origin main
+   ```
+
+3. **The GitHub Action will automatically:**
+   - Build your project
+   - Deploy it to GitHub Pages
+   - Your site will be available at: `https://yourusername.github.io/hussle-space-ai-forge/`
+
+#### Manual Deployment
+
+You can also deploy manually using the gh-pages package:
+
+```sh
+# Build and deploy to GitHub Pages
+npm run deploy
+```
+
+**Note:** Make sure you have enabled GitHub Pages in your repository settings and set the source to "Deploy from a branch" with the `gh-pages` branch selected.
 
 ## Can I connect a custom domain to my Lovable project?
 
