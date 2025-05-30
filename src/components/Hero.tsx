@@ -4,33 +4,33 @@ import { ArrowRight, Play, Bot, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient w-full">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-400/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white mb-8">
             <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Introducing AI Agent Revolution</span>
+            <span className="text-sm font-medium">Professional AI Agent Services</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Build Powerful
+            We Build Powerful
             <span className="block bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
               AI Agents
             </span>
-            That Actually Work
+            For Your Business
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Create intelligent AI agents that automate your business processes, 
+            Our expert team creates custom AI agents that automate your business processes, 
             engage customers 24/7, and scale your operations without limits.
           </p>
 
@@ -39,8 +39,9 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-white text-primary-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold group"
+              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Start Building for Free
+              Book a Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -49,13 +50,13 @@ const Hero = () => {
               className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-sm"
             >
               <Play className="mr-2 w-5 h-5" />
-              Watch Demo
+              View Our Work
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className="text-purple-200 text-sm">
-            <p className="mb-4">Trusted by 50,000+ businesses worldwide</p>
+            <p className="mb-4">Trusted by 50+ businesses worldwide</p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
               <div className="text-white font-semibold">Microsoft</div>
               <div className="text-white font-semibold">Salesforce</div>

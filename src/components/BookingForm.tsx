@@ -80,152 +80,168 @@ const BookingForm = () => {
   };
 
   return (
-    <section id="booking" className="py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="booking" className="py-20 bg-gray-50 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Book a Consultation
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to transform your business with AI agents? Schedule a call with our experts to discuss your specific needs.
+            Ready to transform your business with custom AI agents? Schedule a call with our experts to discuss your specific needs.
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Full Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Enter your full name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email Address</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="Enter your email" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Tell us about your business and how we can help you with AI agents"
-                        className="min-h-[120px]"
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <FormField
-                  control={form.control}
-                  name="date"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-col">
-                      <FormLabel>Preferred Date</FormLabel>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <FormControl>
-                            <Button
-                              variant="outline"
-                              className={cn(
-                                "w-full pl-3 text-left font-normal",
-                                !field.value && "text-muted-foreground"
-                              )}
-                            >
-                              {field.value ? (
-                                format(field.value, "PPP")
-                              ) : (
-                                <span>Pick a date</span>
-                              )}
-                              <Calendar className="ml-auto h-4 w-4 opacity-50" />
-                            </Button>
-                          </FormControl>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
-                          <CalendarComponent
-                            mode="single"
-                            selected={field.value}
-                            onSelect={field.onChange}
-                            disabled={(date) =>
-                              date < new Date() || date.getDay() === 0 || date.getDay() === 6
-                            }
-                            initialFocus
-                            className={cn("p-3 pointer-events-auto")}
-                          />
-                        </PopoverContent>
-                      </Popover>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="time"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Preferred Time</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem className="space-y-3">
+                        <FormLabel className="text-base font-semibold text-gray-700">Full Name</FormLabel>
                         <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a time" />
-                          </SelectTrigger>
+                          <Input 
+                            placeholder="Enter your full name" 
+                            className="h-12 text-base"
+                            {...field} 
+                          />
                         </FormControl>
-                        <SelectContent>
-                          {timeSlots.map((time) => (
-                            <SelectItem key={time} value={time}>
-                              <div className="flex items-center">
-                                <Clock className="w-4 h-4 mr-2" />
-                                {time}
-                              </div>
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem className="space-y-3">
+                        <FormLabel className="text-base font-semibold text-gray-700">Email Address</FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            className="h-12 text-base"
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="space-y-3">
+                      <FormLabel className="text-base font-semibold text-gray-700">Message</FormLabel>
+                      <FormControl>
+                        <Textarea 
+                          placeholder="Tell us about your business and how we can help you with AI agents"
+                          className="min-h-[120px] text-base resize-none"
+                          {...field} 
+                        />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-              </div>
 
-              <Button type="submit" className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3">
-                Schedule Consultation
-              </Button>
-            </form>
-          </Form>
-        </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <FormField
+                    control={form.control}
+                    name="date"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-col space-y-3">
+                        <FormLabel className="text-base font-semibold text-gray-700">Preferred Date</FormLabel>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <FormControl>
+                              <Button
+                                variant="outline"
+                                className={cn(
+                                  "w-full h-12 pl-3 text-left font-normal text-base justify-start",
+                                  !field.value && "text-muted-foreground"
+                                )}
+                              >
+                                {field.value ? (
+                                  format(field.value, "PPP")
+                                ) : (
+                                  <span>Pick a date</span>
+                                )}
+                                <Calendar className="ml-auto h-4 w-4 opacity-50" />
+                              </Button>
+                            </FormControl>
+                          </PopoverTrigger>
+                          <PopoverContent className="w-auto p-0" align="start">
+                            <CalendarComponent
+                              mode="single"
+                              selected={field.value}
+                              onSelect={field.onChange}
+                              disabled={(date) =>
+                                date < new Date() || date.getDay() === 0 || date.getDay() === 6
+                              }
+                              initialFocus
+                              className={cn("p-3 pointer-events-auto")}
+                            />
+                          </PopoverContent>
+                        </Popover>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-        <div className="text-center mt-8 text-gray-600">
-          <p className="text-sm">
-            We typically respond within 24 hours. For urgent inquiries, please call us directly.
-          </p>
+                  <FormField
+                    control={form.control}
+                    name="time"
+                    render={({ field }) => (
+                      <FormItem className="space-y-3">
+                        <FormLabel className="text-base font-semibold text-gray-700">Preferred Time</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="h-12 text-base">
+                              <SelectValue placeholder="Select a time" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {timeSlots.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                <div className="flex items-center">
+                                  <Clock className="w-4 h-4 mr-2" />
+                                  {time}
+                                </div>
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <div className="pt-4">
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary-600 hover:bg-primary-700 text-white py-4 text-lg font-semibold"
+                  >
+                    Schedule Consultation
+                  </Button>
+                </div>
+              </form>
+            </Form>
+          </div>
+
+          <div className="text-center mt-8 text-gray-600">
+            <p className="text-sm">
+              We typically respond within 24 hours. For urgent inquiries, please call us directly.
+            </p>
+          </div>
         </div>
       </div>
     </section>

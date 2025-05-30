@@ -4,26 +4,26 @@ import { ArrowRight, Check } from 'lucide-react';
 
 const CTA = () => {
   const benefits = [
-    "Start with 1,000 free conversations",
-    "No credit card required",
-    "Setup in under 10 minutes",
-    "24/7 customer support"
+    "Free consultation included",
+    "30-day money-back guarantee",
+    "Setup in under 2 weeks",
+    "24/7 ongoing support"
   ];
 
   return (
-    <section className="py-20 bg-hero-gradient">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-hero-gradient w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Main CTA */}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to revolutionize your business with
             <span className="block bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
-              AI agents?
+              custom AI agents?
             </span>
           </h2>
 
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using HussleSpace to automate operations, 
+            Join hundreds of businesses already using HussleSpace's custom AI agents to automate operations, 
             engage customers, and scale without limits.
           </p>
 
@@ -42,8 +42,9 @@ const CTA = () => {
             <Button 
               size="lg" 
               className="bg-white text-primary-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold group"
+              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Start Building for Free
+              Book Free Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -51,13 +52,13 @@ const CTA = () => {
               variant="outline" 
               className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-sm"
             >
-              Schedule Demo
+              View Case Studies
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <p className="text-purple-200 text-sm">
-            Trusted by 50,000+ businesses • SOC 2 Compliant • 99.9% Uptime
+            Trusted by 50+ businesses • SOC 2 Compliant • 99.9% Uptime
           </p>
         </div>
       </div>

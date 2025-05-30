@@ -3,21 +3,21 @@ import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = {
-    Product: [
-      { name: 'Features', href: '#features' },
-      { name: 'Pricing', href: '#pricing' },
-      { name: 'API Docs', href: '#' },
-      { name: 'Integrations', href: '#' },
+    Services: [
+      { name: 'Custom AI Agents', href: '#features' },
+      { name: 'Consultation', href: '#booking' },
+      { name: 'Integration Support', href: '#' },
+      { name: 'Maintenance', href: '#' },
     ],
     Company: [
       { name: 'About Us', href: '#' },
-      { name: 'Careers', href: '#' },
+      { name: 'Our Team', href: '#' },
+      { name: 'Case Studies', href: '#' },
       { name: 'Blog', href: '#' },
-      { name: 'Press', href: '#' },
     ],
     Resources: [
       { name: 'Help Center', href: '#' },
-      { name: 'Community', href: '#' },
+      { name: 'Documentation', href: '#' },
       { name: 'Guides', href: '#' },
       { name: 'Webinars', href: '#' },
     ],
@@ -37,17 +37,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gray-900 text-white w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
           {/* Brand Section */}
           <div className="col-span-2 lg:col-span-2">
             <h3 className="text-2xl font-bold bg-purple-gradient bg-clip-text text-transparent mb-4">
               HussleSpace
             </h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Build powerful AI agents that automate your business, engage customers 24/7, 
+              Professional AI agent development services that automate your business, engage customers 24/7, 
               and scale your operations without limits.
             </p>
             
@@ -87,11 +87,11 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-800 mt-12 pt-8 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h4 className="font-semibold mb-2">Stay updated</h4>
-              <p className="text-gray-400">Get the latest updates on AI agents and automation.</p>
+              <p className="text-gray-400">Get the latest insights on AI agents and business automation.</p>
             </div>
             <div className="flex gap-2 w-full md:w-auto">
               <input
@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
           <p className="text-gray-400 text-sm">
             © 2024 HussleSpace. All rights reserved.
           </p>

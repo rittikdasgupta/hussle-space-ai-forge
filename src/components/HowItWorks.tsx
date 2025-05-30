@@ -5,40 +5,40 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: Settings,
-      title: "Design & Configure",
-      description: "Use our intuitive no-code builder to design your AI agent's personality, knowledge base, and workflows.",
+      title: "Consultation & Planning",
+      description: "We analyze your business needs, identify automation opportunities, and design a custom AI agent strategy.",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: MessageCircle,
-      title: "Train & Test",
-      description: "Train your agent with your data, test conversations, and refine responses to match your brand voice.",
+      title: "Development & Training",
+      description: "Our experts build and train your AI agent with your data, ensuring it matches your brand voice and business requirements.",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: BarChart,
-      title: "Deploy & Scale",
-      description: "Launch your agent across multiple channels and watch it handle thousands of conversations simultaneously.",
+      title: "Deployment & Optimization",
+      description: "We deploy your agent across your channels and continuously monitor and optimize performance for maximum results.",
       color: "from-green-500 to-emerald-500"
     }
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-20 bg-white w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How it works
+            How we work
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Building powerful AI agents has never been easier. Follow these simple steps 
-            to create agents that transform your business operations.
+            Our proven process ensures you get powerful AI agents that transform your business operations 
+            and deliver measurable results.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="space-y-12">
+        <div className="space-y-12 max-w-7xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col lg:flex-row items-center gap-8">
               {/* Step Number & Icon */}
@@ -74,13 +74,13 @@ const HowItWorks = () => {
         </div>
 
         {/* Demo Section */}
-        <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12">
+        <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              See it in action
+              See our work in action
             </h3>
             <p className="text-gray-600">
-              Watch how easy it is to create and deploy an AI agent in under 5 minutes.
+              Watch how our custom AI agents deliver results for businesses like yours.
             </p>
           </div>
 
@@ -90,14 +90,14 @@ const HowItWorks = () => {
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="ml-4 text-gray-400 text-sm">HussleSpace Agent Builder</span>
+                <span className="ml-4 text-gray-400 text-sm">HussleSpace Agent Dashboard</span>
               </div>
               <div className="bg-gray-800 rounded p-4">
-                <div className="text-green-400 mb-2">$ Creating AI agent...</div>
-                <div className="text-gray-300 mb-1">✓ Initializing knowledge base</div>
-                <div className="text-gray-300 mb-1">✓ Training conversational model</div>
-                <div className="text-gray-300 mb-1">✓ Configuring response templates</div>
-                <div className="text-green-400">✓ Agent ready for deployment!</div>
+                <div className="text-green-400 mb-2">$ AI Agent Performance Report</div>
+                <div className="text-gray-300 mb-1">✓ Customer satisfaction: 95%</div>
+                <div className="text-gray-300 mb-1">✓ Response time: 0.3 seconds</div>
+                <div className="text-gray-300 mb-1">✓ Cost reduction: 60%</div>
+                <div className="text-green-400">✓ ROI achieved in 30 days!</div>
               </div>
             </div>
           </div>
