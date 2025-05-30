@@ -1,6 +1,6 @@
+import { ArrowRight, Check } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
 
 const CTA = () => {
   const benefits = [
@@ -46,13 +46,6 @@ const CTA = () => {
             >
               Book Free Consultation
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm w-full sm:w-auto"
-            >
-              View Case Studies
             </Button>
           </div>
 

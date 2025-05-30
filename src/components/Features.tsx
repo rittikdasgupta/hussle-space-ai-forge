@@ -1,5 +1,4 @@
-
-import { Bot, Zap, Shield, BarChart3, MessageSquare, Clock } from 'lucide-react';
+import { BarChart3, Bot, Clock, MessageSquare, Shield, Zap } from 'lucide-react';
 
 const Features = () => {
   const features = [
@@ -83,7 +82,7 @@ const Features = () => {
               className="bg-purple-gradient text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm sm:text-base"
               onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Book Consultation
+              Book Free Consultation
             </button>
           </div>
         </div>

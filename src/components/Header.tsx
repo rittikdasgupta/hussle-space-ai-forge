@@ -1,7 +1,7 @@
-
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,6 @@ const Header = () => {
     { name: 'Features', href: '#features' },
     { name: 'How it Works', href: '#how-it-works' },
     { name: 'Booking', href: '#booking' },
-    { name: 'Resources', href: '#resources' },
   ];
 
   return (
@@ -41,8 +40,10 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center">
-            <Button className="bg-purple-gradient hover:opacity-90 text-white text-sm xl:text-base px-4 xl:px-6">
-              Get Started Free
+            <Button className="bg-purple-gradient hover:opacity-90 text-white text-sm xl:text-base px-4 xl:px-6"
+            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Book Free Consultation
             </Button>
           </div>
 

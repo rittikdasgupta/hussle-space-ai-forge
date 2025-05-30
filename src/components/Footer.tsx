@@ -1,5 +1,4 @@
-
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = {
@@ -109,7 +108,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
           <p className="text-gray-400 text-sm">
-            © 2024 HussleSpace. All rights reserved.
+            © 2025 HussleSpace. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-gray-400">
             <span>Made with ❤️ in San Francisco</span>

@@ -1,6 +1,6 @@
+import { ArrowRight, Bot, Play, Sparkles } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play, Bot, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -41,28 +41,14 @@ const Hero = () => {
               className="bg-white text-primary-700 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold group w-full sm:w-auto"
               onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Book a Consultation
+              Book Free Consultation
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur-sm w-full sm:w-auto"
-            >
-              <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-              View Our Work
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className="text-purple-200 text-xs sm:text-sm px-4">
             <p className="mb-3 sm:mb-4">Trusted by 50+ businesses worldwide</p>
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
-              <div className="text-white font-semibold text-xs sm:text-sm">Microsoft</div>
-              <div className="text-white font-semibold text-xs sm:text-sm">Salesforce</div>
-              <div className="text-white font-semibold text-xs sm:text-sm">HubSpot</div>
-              <div className="text-white font-semibold text-xs sm:text-sm">Slack</div>
-            </div>
           </div>
         </div>
 
