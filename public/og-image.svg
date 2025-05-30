@@ -1,0 +1,49 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E1B4B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#312E81;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B46C1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C084FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="200" cy="150" r="80" fill="#6B46C1" opacity="0.3"/>
+  <circle cx="1000" cy="480" r="120" fill="#8B5CF6" opacity="0.2"/>
+  
+  <!-- Main Content -->
+  <text x="600" y="200" font-family="Inter, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="white">
+    HussleSpace
+  </text>
+  
+  <text x="600" y="280" font-family="Inter, sans-serif" font-size="36" font-weight="600" text-anchor="middle" fill="url(#textGradient)">
+    Build Powerful AI Agents
+  </text>
+  
+  <text x="600" y="340" font-family="Inter, sans-serif" font-size="28" text-anchor="middle" fill="#E5DBFF">
+    That Actually Work
+  </text>
+  
+  <text x="600" y="420" font-family="Inter, sans-serif" font-size="20" text-anchor="middle" fill="#C4B5FD">
+    Professional AI agent development services
+  </text>
+  
+  <text x="600" y="450" font-family="Inter, sans-serif" font-size="20" text-anchor="middle" fill="#C4B5FD">
+    for your business automation needs
+  </text>
+  
+  <!-- Bot Icon -->
+  <rect x="520" y="480" width="160" height="80" rx="12" fill="white" opacity="0.1"/>
+  <rect x="540" y="500" width="120" height="40" rx="8" fill="#1F2937"/>
+  <circle cx="560" cy="520" r="4" fill="#10B981"/>
+  <text x="580" y="525" font-family="Inter, sans-serif" font-size="12" fill="white">AI Agent Online</text>
+</svg> 

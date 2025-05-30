@@ -9,8 +9,16 @@ const Header = () => {
   const navigation = [
     { name: 'Features', href: '#features' },
     { name: 'How it Works', href: '#how-it-works' },
-    { name: 'Booking', href: '#booking' },
   ];
+
+  const handleNavClick = (href: string) => {
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-gray-200 z-50">
@@ -28,13 +36,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navigation.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-sm xl:text-base"
+                onClick={() => handleNavClick(item.href)}
+                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-sm xl:text-base cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -65,17 +73,19 @@ const Header = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               {navigation.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="block px-3 py-3 text-gray-700 hover:text-primary-600 font-medium text-base"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="block px-3 py-3 text-gray-700 hover:text-primary-600 font-medium text-base w-full text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
               <div className="px-3 pt-4 pb-2">
-                <Button className="bg-purple-gradient text-white w-full">
+                <Button 
+                  className="bg-purple-gradient text-white w-full"
+                  onClick={() => handleNavClick('#booking')}
+                >
                   Get Started Free
                 </Button>
               </div>
