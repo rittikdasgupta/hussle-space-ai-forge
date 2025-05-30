@@ -100,6 +100,36 @@ npm run deploy
 
 **Note:** Make sure you have enabled GitHub Pages in your repository settings and set the source to "Deploy from a branch" with the `gh-pages` branch selected.
 
+## Setting up a Custom Domain
+
+To use a custom domain with your GitHub Pages deployment:
+
+1. **Create a CNAME file** in the `public` directory:
+   ```bash
+   echo "yourdomain.com" > public/CNAME
+   ```
+   Replace `yourdomain.com` with your actual domain.
+
+2. **Configure your domain's DNS** to point to GitHub Pages:
+   - For a root domain (example.com): Create A records pointing to:
+     - 185.199.108.153
+     - 185.199.109.153
+     - 185.199.110.153
+     - 185.199.111.153
+   - For a subdomain (www.example.com): Create a CNAME record pointing to `yourusername.github.io`
+
+3. **Deploy with the custom domain build**:
+   ```bash
+   npm run deploy:custom-domain
+   ```
+
+4. **Or push to main branch** - the GitHub Action will automatically detect the CNAME file and build with the correct base path.
+
+5. **Enable custom domain in GitHub Pages settings**:
+   - Go to repository Settings → Pages
+   - Enter your custom domain
+   - Enable "Enforce HTTPS"
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
@@ -122,6 +152,7 @@ This project has been configured to handle GitHub Pages routing issues:
 
 - **404 on page refresh**: Fixed by the HashRouter and redirect scripts
 - **Assets not loading**: Make sure the `base` path in `vite.config.ts` matches your repository name
+- **Blank white screen with custom domain**: Make sure you have a CNAME file in the `public` directory and redeploy using `npm run deploy:custom-domain`
 - **Deployment not updating**: Check the Actions tab in your GitHub repository for build status
 - **Custom domain issues**: Make sure to add a CNAME file in the public directory with your domain name
 

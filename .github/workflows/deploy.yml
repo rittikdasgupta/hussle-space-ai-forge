@@ -23,8 +23,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Check for custom domain
+        id: check-domain
+        run: |
+          if [ -f "public/CNAME" ]; then
+            echo "custom_domain=true" >> $GITHUB_OUTPUT
+            echo "Custom domain detected"
+          else
+            echo "custom_domain=false" >> $GITHUB_OUTPUT
+            echo "No custom domain, using GitHub Pages subdomain"
+          fi
+
+      - name: Build for custom domain
+        if: steps.check-domain.outputs.custom_domain == 'true'
+        run: npm run build:custom-domain
+
+      - name: Build for GitHub Pages subdomain
+        if: steps.check-domain.outputs.custom_domain == 'false'
+        run: npm run build:github-pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
