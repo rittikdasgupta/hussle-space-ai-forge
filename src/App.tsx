@@ -1,9 +1,10 @@
+import "./App.css";
 
-import { Toaster } from "@/components/ui/toaster";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
+
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import "./App.css";
+import { Toaster } from "@/components/ui/toaster";
 
 function App() {
   return (

@@ -107,3 +107,27 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Troubleshooting GitHub Pages Deployment
+
+### Getting 404 errors after deployment?
+
+This project has been configured to handle GitHub Pages routing issues:
+
+1. **HashRouter**: The app uses HashRouter instead of BrowserRouter for better compatibility with GitHub Pages
+2. **404.html fallback**: A 404.html file redirects users back to the main app
+3. **SPA redirect script**: The main index.html includes a script to handle direct URL access
+
+### Common issues and solutions:
+
+- **404 on page refresh**: Fixed by the HashRouter and redirect scripts
+- **Assets not loading**: Make sure the `base` path in `vite.config.ts` matches your repository name
+- **Deployment not updating**: Check the Actions tab in your GitHub repository for build status
+- **Custom domain issues**: Make sure to add a CNAME file in the public directory with your domain name
+
+### Checking deployment status:
+
+1. Go to your repository on GitHub
+2. Click on the "Actions" tab
+3. Check the latest workflow run for any errors
+4. Your site should be available at: `https://yourusername.github.io/hussle-space-ai-forge/`
